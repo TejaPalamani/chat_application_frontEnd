@@ -206,7 +206,7 @@ function NotEmptyConveration() {
         ))}
       </div>
 
-      <div className=" bg-red-500 w-full h-24  flex felx-row justify-center items-center">
+      <div className=" bg-transparent w-full h-24  flex felx-row justify-center items-center">
         <textarea
           //type="text"
           placeholder="Your Message"
@@ -217,7 +217,11 @@ function NotEmptyConveration() {
           onKeyDown={(e) => e.key === 'Enter' && sendingMessageToServer()}
           className="w-[80%] h-12 rounded-lg m-2 bg-white text-black"
         />
-        <button type="button" onClick={sendingMessageToServer}>
+        <button
+          type="button"
+          className="text-white rounded-r-lg"
+          onClick={sendingMessageToServer}
+        >
           send
         </button>
       </div>
